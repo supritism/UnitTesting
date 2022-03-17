@@ -1,0 +1,12 @@
+Notes :
+1. Abstraction is when we define the required functionality for something without actually implementing
+the details. So we are focusing on what needs to be done instead of how it is to be done.
+2. Interfaces are purely Abstract i.e they don't determine any actual aspect of the implementation. The actual
+implementation is left to the  classes that implement the Interfaces. That's why we use the keyword 'implements' when
+we use any Interface.
+3. Java also allows Abstract classes which provide methods but do not provide any implementation of those methods.
+The implementation is left to the classes that inherit from the abstract class. This is different from inheriting from an
+interface - you can also inherit from an actual class as well.
+
+
+# Difference between Interface and Abstract class: See screenshots in 'InterfacesVsAbstractClasses' package. (Imp)

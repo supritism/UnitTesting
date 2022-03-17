@@ -1,0 +1,56 @@
+What is OOPS ?
+OOPS stands for ‘Object oriented programming System’. It is a programming concept and many software languages
+like JAVA, C++, Phython,.NET,C# etc. use OOPS concept i.e objects in programming.
+
+Key OOPs concepts :
+1. Packages:
+Package in Java is a mechanism to encapsulate a group of classes, sub packages and interfaces. A package is a namespace that organizes a set of related classes and interfaces.
+Conceptually you can think of packages as being similar to different folders on your computer.
+
+2. Classes and Objects:
+a. A CLASS is a blueprint or prototype from which OBJECTS are created.It can contain variables/constructor/methods etc. which help define the functionality of a class.
+b. To better understand a CLASS, OBJECT/INSTANCE  and REFERENCE  see example below :
+   1. Let’s use the analogy of building a house to understand the above .
+      1. A 'CLASS' is basically a blueprint for a house, using the blueprint we can build as many houses as we like.
+      2. Each house you build (in other words 'instantiate' using the 'new' operator) is an 'OBJECT' also known as an 'INSTANCE'.
+      3. Each house you build has an address (a physical location). In other words if you want to tell someone where you live, you give them your address.
+      This is known as a 'REFERENCE'.  We can pass 'references' as parameters to constructors and methods.
+      4. Example : House blueHouse = new House("blue"); //  Here < new House("blue") > creates an object or instance of the “house” class. And 'blueHouse' is the reference.
+
+3. Methods -
+3.1 Method overloading - When two or more methods in a class have the same name but different input parameters. They may or mayn’t have same return types and access modifiers.
+[We can overload static and instance methods]
+
+3.2 Method overriding - Method overriding means defining a method in a child class that already exists in the parent class with the same signature( same name, same arguments).
+[ We cannot override static methods but only Instance methods]
+
+3.3  Instance Methods - Instance methods belong to an instance of a class (i.e class objects).
+To use an instance method we require an object of the class. Instance methods can access instance methods and  variables as well as static methods and static variables directly.
+
+3.4 Static Methods - In Java, it is possible to create a method inside a class that can be used by itself, without reference to an instance/object of the class.
+This type of method is known as the static method. To create such a method, we’ve to precede its declaration with the keyword static.
+They can only access other static methods and variables. They cannot access instance methods or variables.They cannot refer to ‘this’ or ‘super’ in any way.
+
+4. Pillars of OOPS :
+4.1 Inheritance:
+a. It is an important OOPS concept. It is the mechanism by which one class is allowed to inherit the features(fields and methods) of another class.
+The class from which we inherit is called the PARENT/BASE/SUPER class and the class that inherits from the super class is called the CHILD/SUB-CLASS.
+Inheritance supports the concept of ‘Reusability’ i.e when we want to create a new class and there is already a class that includes some of the code that we want,
+we can derive our new class from the existing class instead of building from scratch and adding to redundancy. A sub-class can inherit from a parent class via the keyword - ‘extends’.
+b. With 'Inheritance' we have a 'is a' relation between base class and sub-class. For example if Vehicle is a base class and Car is a class that inherits Vehicle, Car 'is a' Vehicle.
+c. Example : class MountainBike extends Bicycle {  \\ add code  }
+
+4.2 Composition:
+With composition we have a ‘has a ‘ relationship between the classes. When choosing between inheritance and composition, first choose composition and then inheritance.
+Example we have a Class called 'PC' and other classes like 'Monitor', 'Motherboard', 'Cardslots' etc. So PC class 'has a' Monitor, Motherboard, Cardslots etc. i.e PC is composed of these classes.
+
+4.3 Encapsulation:
+It is the mechanism that allows us to restrict access to certain components in the object we are creating. So we can protect members of a class from unauthorized access.
+
+4.4 Polymorphism:
+It is a concept by which we can perform a single action in different ways.It is derived from 2 greek words : Poly meaning ‘many’ and Morph meaning ‘forms’. So it means ‘Many forms’.
+There are 2 types of polymorphism in java - runtime polymorphism and compile-time polymorphism. We can perform polymorphism is java using method overriding and method overloading.
+
+4.5 Abstraction:
+a. Data abstraction is an OOPS concept that shows only essential attributes and hides unnecessary details from the user. Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+b. In Java, abstraction is achieved by interfaces and abstract classes. We can achieve 100% abstraction using interfaces.

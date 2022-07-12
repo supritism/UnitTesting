@@ -1,0 +1,92 @@
+# Mocking with Mockito
+GitHub : https://github.com/in28minutes/MockitoTutorialForBeginners
+----------------------------------------------------------------------
+#Step 01 : Set up an IDE Project with JUnit and Mockito frameworks. First Green Bar.
+
+#Step 02 : Example to start understanding why we need mocks.
+- Create a basic example of TODO management application.
+
+#Step 03 : What is a stub? Create an unit test using Stub? Disadvantages of Stubs.
+- To understand Mockito its very imp to understand the difference between Mocking and Stubbing and
+how to chose between them.
+- A Stub is a dummy implementation of a service/API like the 'ToDoService' in this example. So I can
+create a Stub class that implements the ToDoService interface.
+- Disadvantage of Stub:
+a. We will start having maintenance issues as Stubs are nothing but a dummy implementation of the
+actual service. So if the dependent service or interface has an additional method added or any other change made, I will need to update my stub as well.
+b. Dynamic conditionals - When I want to test that with different input parameters we am seeing different results, then the Stub will start getting more complex.
+Stubs are useful in simple conditions but otherwise in dynamic conditions we use something called as Mocks.
+
+#Step 04 : Your first Mockito code! Hurrah!!! Lets use Mockito to mock ToDoService.
+What is mocking?
+- It is creating objects that simulate behavior of real objects.
+- Unlike stubs, mocks can be dynamically created from code - at runtime.
+- Mocks offer more functionality than stubbing.
+- You can verify method calls and a lot of other things.
+- Mockito official documentation : https://javadoc.io/static/org.mockito/mockito-core/4.6.1/org/mockito/Mockito.html
+
+#Step 05 : Stubbing variations with Mockito. A few mockito examples mocking List class : Multiple return values, Argument Matchers and throwing exceptions.
+See example usecases in java class - MockitoTest_Step5
+
+Step 06 : Introduction to BDD. Given When Then. BDD Mockito Syntax.
+See example usecases in java class - MockitoTest_Step6
+
+Step 07 : How to verify calls on a mock? Verify how many times a method is called. We will add deleteTodo method to the TodoService.
+See example usecases in java class - MockitoTest_Step7
+
+Step 08 : How to capture an argument which is passed to a mock?
+See example usecases in java class - MockitoTest_Step8
+
+Step 09 : Hamcrest Matchers.
+https://github.com/in28minutes/MockitoTutorialForBeginners/blob/master/Step09.md
+See example usecases in java class - MockitoTest_Step9
+
+Step 10 : Let's simplify things with Mockito Annotations. @Mock, @InjectMocks, @RunWith(MockitoJUnitRunner.class), @Captor
+See example usecases in java class - MockitoTest_Step10
+
+Step 11 : JUnit Rules. Using MockitoJUnit.rule() instead of @RunWith(MockitoJUnitRunner.class).
+We can have only 1 Runner for a Junit class but we can have multiple rules. Hence to address this Junit came up with Rules.
+
+So instead of @RunWith(MockitoJUnitRunner.class) at the start of the class we can do the below Rule instead inside the class
+and all the rules will run at the start and end of the class and they have to be declared as public :
+Syntax :
+@Rule
+    public MockitoRule mockitoRule = MockitoJUnit.rule();
+
+Junit is now moving away from using Runners and moving more towards Rules as we can have multiple rules
+definited and they are independent of each other.
+
+Step 12 : Real world Example with Spring
+<An real world example. Ignore as concepts used in rest of the steps is used here>
+
+Step 13 : Mockito Spy
+Here we will understand :
+a. Understand what a Spy does?
+b. Creating a spy with Mockito?
+c. Overriding specific methods in a spy?
+
+Step 14 : Some Theory : Why does Mockito not allow stubbing final classes and static and private methods?
+a. Because mockito wants to promote good design and testing concepts.One of the things about unit testing is
+we are supposed to test public interfaces of a class. Mockito really wants to promote that.
+b. Also it is very easy to work around - just change the visibility of method from private to package-protected
+(or protected).
+c. Also if you want to mock private and static methods, you can do so using PowerMock. We will learn about it from Step 15.
+
+Step 15 : Using PowerMock and Mockito to mock a Static Method.
+a. Add 'powermock-api-mockito' and 'powermock-module-junit4' dependency to pom.xml
+b. Copy 'SystemUnderTest.java' + 'UtilityClass.java' class under src >> main folder.
+
+Step 16 : Using PowerMock and Mockito to invoke a private Method.
+
+Step 17 : Using PowerMock and Mockito to mock a constructor.
+
+Step 18 : Good Unit Tests.
+Best practises when writing unit tests :
+1. Unit test must be very readable
+2. Unit test should fails only when there are real logic failures
+Reference links :
+- https://pragprog.com/magazines/2012-01/unit-tests-are-first
+- https://github.com/mockito/mockito/wiki/How-to-write-good-tests
+
+
+

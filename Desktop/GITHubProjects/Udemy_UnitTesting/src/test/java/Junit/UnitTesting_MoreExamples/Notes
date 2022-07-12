@@ -1,0 +1,41 @@
+/* Notes :
+- A unit in java is a METHOD and a Unit test will test one method.
+- Here we are using Junit4.
+# How to add Junit to your Java Class?
+- Click on the top class Name.
+- To the LHS a yellow bulb appears. Click on it and from the dropdown select - 'Create Test'
+- In the window that opens, select the :
+1. Testing Library : I selected Junit 4 (If not there click on 'Fix it' button to get the library)
+2. Class name : <ClassName>+<Test> [Example : If we are creating tests for 'BankAccount' class
+the the tests will be in 'BankAccountTest' class.
+3. Destination package : <path where Junit test will be added>
+4. Select Methods for which you want to create tests and select OK.
+- Now a Test class has been created with empty tests for each method created. If you see
+errors with 'Test' in '@org.junit.Test' showing in red then to fix it go to
+File >> Project Structure - Modules >> Select Junit4 and change Scope from 'Test' to 'Compile'. Apply and errors should go.
+
+# Test methods requirements :
+1. Must be annotated correctly like here with using Junit4 we have to annotate - @org.junit.Test
+2. Must be 'public' and must return 'void'.
+3. Every test method should be self contained i.e what happens in one test method shouldn't depend on another test method.
+4. There can be more than 1 assertions in a single test method.But that is not a best practise. We ideally should have 1 test per test
+condition or assertion.
+5. Another best practice - Test method name should give some indication of the actual condition we are validating.
+
+#Asserts in Junit
+1. assertEquals()
+2. assertArrayEquals - when we want to verify the value of an array.This method considers
+two arrays equal when their lengths are the same, and every element in both arrays is the same and
+in the same order. assertEquals() method won't work as it will only consider 2 arrays equal if
+they are the same instance.
+3. assertNotEquals() - when we don't want the actual value to be equal to a specific value.
+4. assertFalse()
+5. assertTrue()
+6. assertNull() and assertNotNull() - we can use this method to check for null and not null values.
+7. assertSame() and assertNotSame() - we use this when we want to check whether two instances are the
+exact same instance.Remember that assertEquals() method uses the equals() method to test for
+equality. The assertSame() method compares the object references only.
+8. assertThat() - this method compares the actual value against a matcher.This is more powerful than the
+other assert methods, since we can compare the actual value against a range of values.
+
+ */

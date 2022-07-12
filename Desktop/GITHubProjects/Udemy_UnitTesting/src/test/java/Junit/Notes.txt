@@ -1,0 +1,9 @@
+Unit Testing with JUnit :
+
+1. UNIT TESTING is a type of software testing where individual units or components of a software are tested. The unit can be a single method,
+a group of methods or it can also be a set of classes.
+2. Unit Testing is done during the development (coding phase) of an application by the developers.
+Unit Tests isolate a section of code and verify its correctness.
+3. In SDLC, Unit testing is first level of testing done before integration testing. Unit testing is a WhiteBox testing technique
+that is usually performed by the developer.
+

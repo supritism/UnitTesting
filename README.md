@@ -1,6 +1,5 @@
 # UnitTesting 
-This reposiroty containes my notes on Unit testing with Junit, Mockito and PowerMock.
-
+This repository contains my notes on Unit testing with Junit, Mockito and PowerMock.
 
 **Difference between mockito-core vs mockito-inline :**
 > mockito-core allows us to create mock objects. Since static methods belong to the class, there is no way to mock static methods using mockito-core. 
